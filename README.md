@@ -1,4 +1,4 @@
-# 2024_Deep Learning (CS47001_F24)_Raghu Sai Nath Reddy
+# Deep Learning_Raghu Sai Nath Reddy_HW1P1
 ### Question 1
 # Matrix Multiplication README
 
