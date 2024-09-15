@@ -47,13 +47,13 @@ where \( a_{ik} \) is the element in the \( i \)-th row and \( k \)-th column of
 
 - **First Row of \( R \)**:
   \[
-  r_{11} = (7 \times 12) + (2 \times 10) + (1 \times 6) = 84 + 20 + 6 = 110
+  r_{11} = (7 \ 12) + (2 \ 10) + (1 \ 6) = 84 + 20 + 6 = 110
   \]
   \[
-  r_{12} = (7 \times 3) + (2 \times 2) + (1 \times 8) = 21 + 4 + 8 = 33
+  r_{12} = (7 \ 3) + (2 \ 2) + (1 \ 8) = 21 + 4 + 8 = 33
   \]
   \[
-  r_{13} = (7 \times 0) + (2 \times 4) + (1 \times 3) = 0 + 8 + 3 = 11
+  r_{13} = (7 \ 0) + (2 \ 4) + (1 \ 3) = 0 + 8 + 3 = 11
   \]
 
 - **Second Row of \( R \)**:
