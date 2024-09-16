@@ -1,104 +1,73 @@
-# Deep Learning_Raghu Sai Nath Reddy_HW1P1
-### Question 1
-# Matrix Multiplication README
+# Deep Learning_Raghu Sai Nath Reddy_HW1P2
+### Question 2
+# Solving a System of Linear Equations
 
-## Overview
+## Problem Statement
 
-This document explains the computation of the matrix product \( R = A \times B \) given two matrices \( A \) and \( B \). The matrices are:
+We need to solve the following system of linear equations:
 
-Matrix \( A \):
+1. \( 3x + 4y = -2 \)
+2. \( 5x + 3y = 4 \)
+
+## Matrix Representation
+
+The system can be represented in matrix form as:
+
+\[ AX = B \]
+
+where:
+
+- \( A = \begin{bmatrix} 3 & 4 \\ 5 & 3 \end{bmatrix} \)
+- \( X = \begin{bmatrix} x \\ y \end{bmatrix} \)
+- \( B = \begin{bmatrix} -2 \\ 4 \end{bmatrix} \)
+
+## Solution Method
+
+To solve for \( X \), we use the matrix inverse method:
+
+\[ X = A^{-1}B \]
+
+### Finding the Inverse of Matrix \( A \)
+
+The inverse of a 2x2 matrix \( A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \) is given by:
+
+\[ A^{-1} = \frac{1}{ad - bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix} \]
+
+#### Step-by-Step Calculation
+
+1. **Calculate the Determinant of \( A \):**
+
+   \[
+   \text{det}(A) = ad - bc = (3 \cdot 3) - (4 \cdot 5) = 9 - 20 = -11
+   \]
+
+2. **Compute the Inverse of \( A \):**
+
+   \[
+   A^{-1} = \frac{1}{-11} \begin{bmatrix} 3 & -4 \\ -5 & 3 \end{bmatrix} = \begin{bmatrix} \frac{-3}{11} & \frac{4}{11} \\ \frac{5}{11} & \frac{-3}{11} \end{bmatrix}
+   \]
+
+### Solve for \( X \)
+
+Multiply \( A^{-1} \) by \( B \):
+
 \[
-A =
-\begin{bmatrix}
-7 & 2 & 1 \\
-10 & 5 & 0 \\
-7 & 3 & 2 \\
-4 & 8 & 9
-\end{bmatrix}
+X = A^{-1}B = \begin{bmatrix} \frac{-3}{11} & \frac{4}{11} \\ \frac{5}{11} & \frac{-3}{11} \end{bmatrix} \begin{bmatrix} -2 \\ 4 \end{bmatrix}
 \]
 
-Matrix \( B \):
+#### Calculation:
+
 \[
-B =
-\begin{bmatrix}
-12 & 3 & 0 \\
-10 & 2 & 4 \\
-6 & 8 & 3
-\end{bmatrix}
+\begin{bmatrix} \frac{-3}{11} & \frac{4}{11} \\ \frac{5}{11} & \frac{-3}{11} \end{bmatrix} \begin{bmatrix} -2 \\ 4 \end{bmatrix} = \begin{bmatrix} \frac{-3 \cdot (-2) + 4 \cdot 4}{11} \\ \frac{5 \cdot (-2) + (-3) \cdot 4}{11} \end{bmatrix} = \begin{bmatrix} \frac{6 + 16}{11} \\ \frac{-10 - 12}{11} \end{bmatrix} = \begin{bmatrix} \frac{22}{11} \\ \frac{-22}{11} \end{bmatrix} = \begin{bmatrix} 2 \\ -2 \end{bmatrix}
 \]
 
-## Matrix Multiplication Steps
+## Solution
 
-### 1. Confirm Matrix Dimensions
+The solution to the system of linear equations is:
 
-- Matrix \( A \) is \( 4 \times 3 \) (4 rows, 3 columns).
-- Matrix \( B \) is \( 3 \times 3 \) (3 rows, 3 columns).
-- The product matrix \( R \) will be \( 4 \times 3 \) (4 rows, 3 columns).
-
-### 2. Calculate Each Element of Matrix \( R \)
-
-Each element \( r_{ij} \) in matrix \( R \) is computed using:
 \[
-r_{ij} = \sum_{k=1}^{3} a_{ik} \cdot b_{kj}
+X = \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 2 \\ -2 \end{bmatrix}
 \]
-where \( a_{ik} \) is the element in the \( i \)-th row and \( k \)-th column of \( A \), and \( b_{kj} \) is the element in the \( k \)-th row and \( j \)-th column of \( B \).
 
-#### Calculation of Elements
-
-- **First Row of \( R \)**:
-  \[
-  r_{11} = (7 \ 12) + (2 \ 10) + (1 \ 6) = 84 + 20 + 6 = 110
-  \]
-  \[
-  r_{12} = (7 \ 3) + (2 \ 2) + (1 \ 8) = 21 + 4 + 8 = 33
-  \]
-  \[
-  r_{13} = (7 \ 0) + (2 \ 4) + (1 \ 3) = 0 + 8 + 3 = 11
-  \]
-
-- **Second Row of \( R \)**:
-  \[
-  r_{21} = (10 \ 12) + (5 \ 10) + (0 \ 6) = 120 + 50 + 0 = 170
-  \]
-  \[
-  r_{22} = (10 \ 3) + (5 \ 2) + (0 \ 8) = 30 + 10 + 0 = 40
-  \]
-  \[
-  r_{23} = (10 \ 0) + (5 \ 4) + (0 \ 3) = 0 + 20 + 0 = 20
-  \]
-
-- **Third Row of \( R \)**:
-  \[
-  r_{31} = (7 \ 12) + (3 \ 10) + (2 \ 6) = 84 + 30 + 12 = 126
-  \]
-  \[
-  r_{32} = (7 \ 3) + (3 \ 2) + (2 \ 8) = 21 + 6 + 16 = 43
-  \]
-  \[
-  r_{33} = (7 \ 0) + (3 \ 4) + (2 \ 3) = 0 + 12 + 6 = 18
-  \]
-
-- **Fourth Row of \( R \)**:
-  \[
-  r_{41} = (4 \ 12) + (8 \ 10) + (9 \ 6) = 48 + 80 + 54 = 182
-  \]
-  \[
-  r_{42} = (4 \ 3) + (8 \ 2) + (9 \ 8) = 12 + 16 + 72 = 100
-  \]
-  \[
-  r_{43} = (4 \ 0) + (8 \ 4) + (9 \ 3) = 0 + 32 + 27 = 59
-  \]
-
-### Final Matrix \( R \)
-
-Combining all computed elements, the resulting matrix \( R \) is:
-\[
-R =
-\begin{bmatrix}
-110 & 33 & 11 \\
-170 & 40 & 20 \\
-126 & 43 & 18 \\
-182 & 100 & 59
-\end{bmatrix}
-\]
+Thus, the values of \( x \) and \( y \) that satisfy both equations are \( x = 2 \) and \( y = -2 \).
 
