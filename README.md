@@ -52,13 +52,13 @@ The inverse of a 2x2 matrix \( A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} 
 Multiply \( A^{-1} \) by \( B \):
 
 \[
-X = A^{-1}B = \begin{bmatrix} \frac{-3}{11} & \frac{4}{11} \\ \frac{5}{11} & \frac{-3}{11} \end{bmatrix} \begin{bmatrix} -2 \\ 4 \end{bmatrix}
+X = A^{-1}B = \begin{bmatrix} \{-3}{11} & \{4}{11} \\ \{5}{11} & \{-3}{11} \end{bmatrix} \begin{bmatrix} -2 \\ 4 \end{bmatrix}
 \]
 
 #### Calculation:
 
 \[
-\begin{bmatrix} \frac{-3}{11} & \frac{4}{11} \\ \frac{5}{11} & \frac{-3}{11} \end{bmatrix} \begin{bmatrix} -2 \\ 4 \end{bmatrix} = \begin{bmatrix} \frac{-3 \cdot (-2) + 4 \cdot 4}{11} \\ \frac{5 \cdot (-2) + (-3) \cdot 4}{11} \end{bmatrix} = \begin{bmatrix} \frac{6 + 16}{11} \\ \frac{-10 - 12}{11} \end{bmatrix} = \begin{bmatrix} \frac{22}{11} \\ \frac{-22}{11} \end{bmatrix} = \begin{bmatrix} 2 \\ -2 \end{bmatrix}
+\begin{bmatrix} \{-3}{11} & \{4}{11} \\ \{5}{11} & \{-3}{11} \end{bmatrix} \begin{bmatrix} -2 \\ 4 \end{bmatrix} = \begin{bmatrix} \frac{-3 \cdot (-2) + 4 \cdot 4}{11} \\ \{5 \cdot (-2) + (-3) \cdot 4}{11} \end{bmatrix} = \begin{bmatrix} \frac{6 + 16}{11} \\ \{-10 - 12}{11} \end{bmatrix} = \begin{bmatrix} \{22}{11} \\ \{-22}{11} \end{bmatrix} = \begin{bmatrix} 2 \\ -2 \end{bmatrix}
 \]
 
 ## Solution
